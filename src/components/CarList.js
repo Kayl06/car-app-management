@@ -26,17 +26,17 @@ function CarList() {
     const bold = name && car.name.toLowerCase().includes(name.toLowerCase());
 
     return (
-      <div className={`panel ${bold && 'bold'}`} key={car.id}>
+      <div className={`mt-5 p-5 panel ${bold && "bold"}`} key={car.id}>
         <p>
           {car.name} - ${car.cost}
         </p>
 
-        <button
-          className="button is-danger"
-          onClick={() => handleCarDelete(car)}
-        >
-          delete
-        </button>
+        <div className="">
+          <button
+            className="delete is-large"
+            onClick={() => handleCarDelete(car)}
+          ></button>
+        </div>
       </div>
     );
   });

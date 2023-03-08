@@ -29,8 +29,8 @@ function CarForm() {
   };
 
   return (
-    <div className="car-form panel">
-      <h4 className="subtitle is-3">Add Car</h4>
+    <div className="car-form panel mb-6">
+      <h4 className="subtitle is-3">Car details</h4>
       <form onSubmit={handleSubmit}>
         <div className="field-group">
           <div className="field">
@@ -55,7 +55,7 @@ function CarForm() {
         </div>
 
         <div className="field">
-          <button className="button is-link">Submit</button>
+          <button className="button is-dark is-fullwidth">Submit</button>
         </div>
       </form>
     </div>

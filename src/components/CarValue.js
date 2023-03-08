@@ -8,7 +8,19 @@ function CarValue() {
       )
       .reduce((acc, car) => acc + car.cost, 0);
   });
-  return <div className="car-value">Total Cost ${totalCost}</div>;
+
+  const formatCost = () => {
+    return new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+    }).format(totalCost);
+  };
+
+  return (
+    <div className="car-value has-text-weight-semibold	">
+      Total Cost: {formatCost()}
+    </div>
+  );
 }
 
 export default CarValue;
